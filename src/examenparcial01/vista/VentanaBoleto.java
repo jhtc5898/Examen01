@@ -5,6 +5,7 @@
  */
 package examenparcial01.vista;
 
+import examenparcial01.controlador.GestionDato;
 import javax.swing.JInternalFrame;
 import java.awt.FlowLayout;
 import java.util.ArrayList;
@@ -24,5 +25,26 @@ import javax.swing.table.DefaultTableModel;
  * @author Jose
  */
 public class VentanaBoleto extends JInternalFrame {
+    
+    private GestionDato gestionDato;
+    private JComboBox comboAspirante;
+    private JComboBox comboCarrera;
+    private List<JLabel> etiList;
+    private List<JTextField> txtList;
+    private List<JButton> botonList;
+    private JPanel panel;
+    private JScrollPane scroll;
+    private JTable tabla;
+    private DefaultTableModel modeloTabla;
+    private Object[] encabezado;
+    private Object[][] datos;
+    
+    public VentanaBoleto(GestionDato gestionDato) {
+        super("Inscripcion",true,true,true,true);
+        this.gestionDato = gestionDato;
+        this.iniciaComponente();
+        this.setLocation(170, 50);
+        this.setSize(625, 550);              
+    }
     
 }
