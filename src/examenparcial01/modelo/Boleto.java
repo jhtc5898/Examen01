@@ -11,21 +11,21 @@ package examenparcial01.modelo;
  */
 public class Boleto {
     
-    private Asistento a;
+    private Asistente a;
     private Festival f;
     private String asiento;
 
-    public Boleto(Asistento a, Festival f, String asiento) {
+    public Boleto(Asistente a, Festival f, String asiento) {
         this.a = a;
         this.f = f;
         this.asiento = asiento;
     }
 
-    public Asistento getA() {
+    public Asistente getA() {
         return a;
     }
 
-    public void setA(Asistento a) {
+    public void setA(Asistente a) {
         this.a = a;
     }
 

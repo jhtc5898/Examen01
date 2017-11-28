@@ -10,10 +10,20 @@ package examenparcial01.modelo;
  * @author Daniel
  */
 public class Artista extends Persona {
-
-    public Artista(String nombre, String apellido, String cedula, String edad) {
-        super(nombre, apellido, cedula, edad);
-    }
     
+    private String nombreBanda;
+
+    public Artista(String nombreBanda, String nombre, String apellido, String cedula, int edad) {
+        super(nombre, apellido, cedula, edad);
+        this.nombreBanda = nombreBanda;
+    }
+
+    public String getNombreBanda() {
+        return nombreBanda;
+    }
+
+    public void setNombreBanda(String nombreBanda) {
+        this.nombreBanda = nombreBanda;
+    }
     
 }
