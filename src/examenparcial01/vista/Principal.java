@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package examenparcial01;
+package examenparcial01.vista;
 
 import examenparcial01.controlador.GestionDato;
 import examenparcial01.vista.Ventana;
@@ -20,6 +20,7 @@ public class Principal {
     public static void main(String[] args) {
         // TODO code application logic here
         GestionDato gD = new GestionDato();
+        
         
         Ventana v = new Ventana("Examen Parcial 01", gD);
     }
