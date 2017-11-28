@@ -6,7 +6,12 @@
 package examenparcial01.vista;
 
 import examenparcial01.controlador.GestionDato;
+import java.util.ArrayList;
+import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 
 /**
  *
@@ -15,7 +20,11 @@ import javax.swing.JFrame;
 public class Ventana extends JFrame
 {
     private GestionDato gestionDato;
-    
+    private JDesktopPane escritorio;
+    private JMenuBar barraMenu;
+    private java.util.List<JMenu> menuList;
+    private ArrayList<JMenuItem> menuItemList;
+    private GestionDato Gd;
     
     public Ventana(String t, GestionDato gD)
     {
@@ -26,9 +35,10 @@ public class Ventana extends JFrame
         this.setDefaultCloseOperation(3);
         this.setVisible(true);
     }
-    
-
-    private void iniciaComponentes() {
+    private void iniciaComponentes() 
+    {
+        System.out.println("Codigo");
+        
 
     }
 }
