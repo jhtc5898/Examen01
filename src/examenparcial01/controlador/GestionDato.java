@@ -6,7 +6,9 @@
 package examenparcial01.controlador;
 
 import examenparcial01.modelo.Boleto;
+import examenparcial01.modelo.Festival;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -15,9 +17,16 @@ import java.util.List;
 public class GestionDato {
     
     private List<Boleto> boletoList;
+    private List<Festival> festivalList;
 
-    public GestionDato(List<Boleto> boletoList) {
+    public GestionDato(List<Boleto> boletoList, List<Festival> festivalList) {
         this.boletoList = boletoList;
+        this.festivalList = festivalList;
+    }
+    
+    public boolean addFestival(Festival p)
+    {
+        return this.festivalList.add(p);
     }
 
     public List<Boleto> getBoletoList() {
@@ -31,5 +40,15 @@ public class GestionDato {
     public boolean addBoleto(Boleto boleto) {
         return this.boletoList.add(boleto);
     }
+
+    public List<Festival> getFestivalList() {
+        return festivalList;
+    }
+
+    public void setFestivalList(List<Festival> festivalList) {
+        this.festivalList = festivalList;
+    }
+    
+    
     
 }

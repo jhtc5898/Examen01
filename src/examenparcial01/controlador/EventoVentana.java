@@ -6,6 +6,7 @@
 package examenparcial01.controlador;
 
 import examenparcial01.vista.Ventana;
+import examenparcial01.vista.VentanaFestival;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -38,6 +39,9 @@ public class EventoVentana implements ActionListener
            if (e.getSource().equals(this.Ventana.getMenuItemList().get(3))) 
          {
              System.err.println("Agregar ventana Festival");
+              VentanaFestival VenFest = new VentanaFestival(this.Ventana.getGestionDato());
+             VenFest.setVisible(true);
+             this.Ventana.getEscritorio().add(VenFest);
          }
              if (e.getSource().equals(this.Ventana.getMenuItemList().get(4))) 
          {

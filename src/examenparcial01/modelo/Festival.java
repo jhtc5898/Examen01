@@ -9,6 +9,47 @@ package examenparcial01.modelo;
  *
  * @author Jose
  */
-public class Festival {
-    
+public class Festival 
+{
+    private String nombreFestival;
+    private String direccion;
+    private String auspicio;
+
+    public String getNombreFestival() {
+        return nombreFestival;
+    }
+
+    public void setNombreFestival(String nombreFestival) {
+        this.nombreFestival = nombreFestival;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getAuspicio() {
+        return auspicio;
+    }
+
+    public void setAuspicio(String auspicio) {
+        this.auspicio = auspicio;
+    }
+
+    public Festival(String nombreFestival, String direccion, String auspicio) {
+        this.nombreFestival = nombreFestival;
+        this.direccion = direccion;
+        this.auspicio = auspicio;
+    }
+
+    @Override
+    public String toString() {
+        return "Festival{" + "nombreFestival=" + nombreFestival + ", direccion=" + direccion + ", auspicio=" + auspicio + '}';
+    }
+
+
+  
 }

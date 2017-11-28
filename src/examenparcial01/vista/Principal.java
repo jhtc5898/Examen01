@@ -7,6 +7,7 @@ package examenparcial01.vista;
 
 import examenparcial01.controlador.GestionDato;
 import examenparcial01.modelo.Boleto;
+import examenparcial01.modelo.Festival;
 import examenparcial01.vista.Ventana;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,8 +24,8 @@ public class Principal {
     public static void main(String[] args) {
         // TODO code application logic here
         List<Boleto> lB = new ArrayList<Boleto>();
-        GestionDato gD = new GestionDato(lB);
-        
+        List<Festival> Fv = new ArrayList<Festival>();
+        GestionDato gD = new GestionDato(lB,Fv);
         
         Ventana v = new Ventana("Examen Parcial 01", gD);
     }
