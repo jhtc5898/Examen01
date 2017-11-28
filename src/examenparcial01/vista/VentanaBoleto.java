@@ -42,7 +42,7 @@ public class VentanaBoleto extends JInternalFrame {
     public VentanaBoleto(GestionDato gestionDato) {
         super("Inscripcion",true,true,true,true);
         this.gestionDato = gestionDato;
-        this.iniciaComponente();
+        //this.iniciaComponente();
         this.setLocation(170, 50);
         this.setSize(625, 550);              
     }
