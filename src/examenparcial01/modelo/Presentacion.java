@@ -9,13 +9,13 @@ package examenparcial01.modelo;
  *
  * @author Daniel
  */
-public class Preentacion {
+public class Presentacion {
     
     private Festival festival;
     private Artista artista;
     private int numPresentaciones;
 
-    public Preentacion(Festival festival, Artista artista, int numPresentaciones) {
+    public Presentacion(Festival festival, Artista artista, int numPresentaciones) {
         this.festival = festival;
         this.artista = artista;
         this.numPresentaciones = numPresentaciones;
