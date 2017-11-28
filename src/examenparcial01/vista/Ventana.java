@@ -37,8 +37,43 @@ public class Ventana extends JFrame
     }
     private void iniciaComponentes() 
     {
-        System.out.println("Codigo");
+       this.escritorio= new JDesktopPane();
+        this.barraMenu= new JMenuBar();
+        this.menuList=new ArrayList<JMenu>();// llamado al array
+        this.menuList.add(new JMenu("Participante"));// ingreso de datos en el array
+        this.menuList.add(new JMenu("Festival"));// ingreso de datos en el array
+        this.menuList.add(new JMenu(""));// ingreso de datos en el array
+        this.menuItemList= new ArrayList<JMenuItem>();
+        this.menuItemList.add(new JMenuItem("Presentacion"));
+        this.menuItemList.add(new JMenuItem("Boleto"));
+        this.menuItemList.add(new JMenuItem("Artista"));
+        this.menuItemList.add(new JMenuItem("Festival"));
+
+        this.menuItemList.add(new JMenuItem("Consultar Carrera"));
+        this.menuItemList.add(new JMenuItem("Consultar Estudiante"));
         
+     
+        
+        this.setContentPane(this.escritorio);
+        this.setJMenuBar(barraMenu);
+        
+        this.barraMenu.add(this.menuItemList.get(0));
+        this.barraMenu.add(this.menuItemList.get(1));
+        this.barraMenu.add(this.menuItemList.get(2));
+        this.barraMenu.add(this.menuItemList.get(3));
+        this.barraMenu.add(this.menuList.get(0));
+        this.menuList.get(0).add(this.menuItemList.get(4));
+        this.menuList.get(0).add(this.menuItemList.get(5));
+       
+        
+        
+        /*this.menuItemList.get(0).addActionListener(new EventoVentana(this));
+        this.menuItemList.get(1).addActionListener(new EventoVentana(this));
+        this.menuItemList.get(2).addActionListener(new EventoVentana(this));
+        this.menuItemList.get(3).addActionListener(new EventoVentana(this));
+        this.menuItemList.get(4).addActionListener(new EventoVentana(this));
+        this.menuItemList.get(5).addActionListener(new EventoVentana(this));
+        */
 
     }
 }
