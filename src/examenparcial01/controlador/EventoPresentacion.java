@@ -65,7 +65,7 @@ public class EventoPresentacion implements ActionListener {
                 boolean ban = true;
                 for(Presentacion pr: this.ventanaPresentacion.getGestionDato().getPresentacionList()) {
                     
-                    if (pr.getFestival().getNombreFestival() == p.getFestival().getNombreFestival() && pr.getArtista().equals(artista) == true) {
+                    if (pr.getNumPresentaciones() == p.getNumPresentaciones() || (pr.getArtista()== p.getArtista() && pr.getFestival()==p.getFestival()) ) {
                     ban = false;
                     JDialog d = new JDialog();
                     d.setTitle("Error");

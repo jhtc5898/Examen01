@@ -36,8 +36,23 @@ public class EventoFestival implements ActionListener
                   String direccion=this.VenFest.getTxtList().get(1).getText();
                   String auspicio=this.VenFest.getTxtList().get(2).getText();//Cmabion de String a INT
                   
-        Festival festival = new Festival(nombre,direccion,auspicio);
-        this.VenFest.getGestionDato().addFestival(festival);
+                Festival festival = new Festival(nombre,direccion,auspicio);
+                int i = 0;            
+                boolean ban = true;
+                for(Festival pr: this.VenFest.getGestionDato().getFestivalList()) 
+                {
+                    
+                    if (pr.getNombreFestival().equals(festival.getNombreFestival())  ) {
+                    ban = false;
+                   JOptionPane.showMessageDialog(null,"Ingrese un dato correcto .");
+                    break;
+                    }
+                    i++;
+                }
+                if(ban == true) {
+                    this.VenFest.getGestionDato().addFestival(festival);
+                }
+                
         this.VenFest.getTxtList().get(0).setText("");
         this.VenFest.getTxtList().get(1).setText("");
         this.VenFest.getTxtList().get(2).setText("");  
