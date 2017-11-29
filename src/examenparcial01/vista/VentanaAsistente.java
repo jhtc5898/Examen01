@@ -10,9 +10,9 @@ package examenparcial01.vista;
 
 
 
-import examenparcial01.controlador.EventoArtista;
+import examenparcial01.controlador.EventoAsistente;
 import examenparcial01.controlador.GestionDato;
-import examenparcial01.modelo.Artista;
+import examenparcial01.modelo.Asistente;
 import java.awt.FlowLayout;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +29,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Jose
  */
-public class VentanaArtista extends JInternalFrame{
+public class VentanaAsistente extends JInternalFrame{
     
     private GestionDato gestionDato;
     private List<JLabel> etiList;
@@ -43,8 +43,8 @@ public class VentanaArtista extends JInternalFrame{
     private JPanel panel;
        
     
-    public VentanaArtista(GestionDato gestionDato) {
-        super("Registrar Artista",true,true,true,true);
+    public VentanaAsistente(GestionDato gestionDato) {
+        super("Registrar Asistente",true,true,true,true);
         this.gestionDato = gestionDato;
         this.iniciaComponentes();
         this.setSize(600, 500);        
@@ -57,16 +57,14 @@ public class VentanaArtista extends JInternalFrame{
         
         this.etiList= new ArrayList<JLabel>();
         this.txtList= new ArrayList<JTextField>();
-        this.etiList.add(new JLabel("Nombre de Banda:"));
-        this.etiList.add(new JLabel("Nombre Representante:"));
-        this.etiList.add(new JLabel("Apellido Representante:"));
-        this.etiList.add(new JLabel("Cedula Representante:"));
-        this.etiList.add(new JLabel("Edad Representante:"));
+        this.etiList.add(new JLabel("Nombre:"));
+        this.etiList.add(new JLabel("Apellido:"));
+        this.etiList.add(new JLabel("Cedula:"));
+        this.etiList.add(new JLabel("Edad:"));
         this.txtList.add(new JTextField(5));
         this.txtList.add(new JTextField(5)); 
         this.txtList.add(new JTextField(5)); 
-        this.txtList.add(new JTextField(5)); 
-        this.txtList.add(new JTextField(5)); 
+        this.txtList.add(new JTextField(5));  
          
         JPanel panel = new JPanel(new FlowLayout());
         
@@ -82,26 +80,22 @@ public class VentanaArtista extends JInternalFrame{
         panel.add(this.etiList.get(3));
         panel.add(this.txtList.get(3));
         
-        panel.add(this.etiList.get(4));
-        panel.add(this.txtList.get(4));
         
-        
-        this.encabezado= new Object[5];               
-        this.encabezado[0]="Nombre Banda";
-        this.encabezado[1]="Nombre";
-        this.encabezado[2]="Apellido";
-        this.encabezado[3]="Cedula";
-        this.encabezado[4]="Edad";
+        this.encabezado= new Object[4];               
+        this.encabezado[0]="Nombre";
+        this.encabezado[1]="Apellido";
+        this.encabezado[2]="Cedula";
+        this.encabezado[3]="Edad";
     
         
         
-        this.datos=cargaDatosTabla(this.gestionDato.getArtistaList().size(),5);
+        this.datos=cargaDatosTabla(this.gestionDato.getAsistenteList().size(),4);
         
         this.modeloTabla = new DefaultTableModel(this.datos,this.encabezado);        
         this.tabla= new JTable(this.modeloTabla);
         this.scroll = new JScrollPane(this.tabla);
         this.boton=new JButton("Guardar");
-        this.boton.addActionListener(new EventoArtista(this));
+        this.boton.addActionListener(new EventoAsistente(this));
         panel.add(this.boton);
         panel.add(this.scroll);
         
@@ -115,13 +109,13 @@ public class VentanaArtista extends JInternalFrame{
     {
         Object[][] retorno= new Object[h][w];
         int i=0;
-        for(Artista a:this.gestionDato.getArtistaList())
+        for(Asistente a:this.gestionDato.getAsistenteList())
         {
-            retorno[i][0]=a.getNombreBanda();
-            retorno[i][1]=a.getNombre();
-            retorno[i][2]=a.getApellido();
-            retorno[i][3]="0"+a.getCedula();
-            retorno[i][4]=a.getEdad();
+    
+            retorno[i][0]=a.getNombre();
+            retorno[i][1]=a.getApellido();
+            retorno[i][2]="0"+a.getCedula();
+            retorno[i][3]=a.getEdad();
             
         
             i++;

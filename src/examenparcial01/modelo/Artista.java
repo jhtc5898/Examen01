@@ -13,7 +13,7 @@ public class Artista extends Persona {
     
     private String nombreBanda;
 
-    public Artista(String nombreBanda, String nombre, String apellido, String cedula, int edad) {
+    public Artista(String nombreBanda, String nombre, String apellido, int cedula, int edad) {
         super(nombre, apellido, cedula, edad);
         this.nombreBanda = nombreBanda;
     }

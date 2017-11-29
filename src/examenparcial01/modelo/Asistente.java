@@ -11,7 +11,7 @@ package examenparcial01.modelo;
  */
 public class Asistente extends Persona {
 
-    public Asistente(String nombre, String apellido, String cedula, int edad) {
+    public Asistente(String nombre, String apellido, int cedula, int edad) {
         super(nombre, apellido, cedula, edad);
     }
     

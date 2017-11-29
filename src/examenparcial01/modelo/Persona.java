@@ -5,10 +5,10 @@ public class Persona {
     
     private String nombre;
     private String apellido;
-    private String cedula;
+    private int cedula;
     private int edad;
 
-    public Persona(String nombre, String apellido, String cedula, int edad) {
+    public Persona(String nombre, String apellido, int cedula, int edad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.cedula = cedula;
@@ -27,10 +27,10 @@ public class Persona {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
-    public String getCedula() {
+    public int getCedula() {
         return cedula;
     }
-    public void setCedula(String cedula) {
+    public void setCedula(int cedula) {
         this.cedula = cedula;
     }
     public int getEdad() {
