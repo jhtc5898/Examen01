@@ -46,8 +46,7 @@ public class VentanaPresentacion extends JInternalFrame{
     {
         super("Ventana Presentacion",true,true,true,true);
         this.gestionDato = gestionDato;
-        this.setSize(800, 550);
-        this.setLocation(420, 120);
+        this.setSize(700, 550);
         this.iniciaComponente();              
     }
 
@@ -141,7 +140,6 @@ public class VentanaPresentacion extends JInternalFrame{
         this.etiList.add(new JLabel("# Presentaciones"));
         
         this.botonList.add(new JButton("Guardar"));
-        this.botonList.add(new JButton("Limpiar"));
         
         this.encabezado = new Object[3];               
         this.encabezado[0] = "Festival";
@@ -149,9 +147,7 @@ public class VentanaPresentacion extends JInternalFrame{
         this.encabezado[2] = "# Presentaciones";
         
         this.datos = cargaDatosTabla(this.gestionDato.getPresentacionList().size(),3);
-         
-
-        
+              
         this.modeloTabla = new DefaultTableModel(this.datos, this.encabezado);        
         this.tabla = new JTable(this.modeloTabla);
         this.scroll = new JScrollPane(this.tabla);
@@ -162,15 +158,11 @@ public class VentanaPresentacion extends JInternalFrame{
         panel.add(this.etiList.get(2));
         panel.add(this.txtList.get(0));
         panel.add(this.botonList.get(0));
-        panel.add(this.botonList.get(1));
         panel.add(this.scroll);
   
         
         this.botonList.get(0).addActionListener(new EventoPresentacion(this));
-        this.botonList.get(1).addActionListener(new EventoPresentacion(this));
-        
-       
-        
+   
         this.add(panel);
     }
     
