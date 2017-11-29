@@ -27,6 +27,7 @@ public class Principal {
     public static void main(String[] args) {
         // TODO code application logic here
         //Actual
+        //
         List<Boleto> lB = new ArrayList<Boleto>();
         List<Festival> Fv = new ArrayList<Festival>();
         List<Presentacion> lP = new ArrayList<Presentacion>();
