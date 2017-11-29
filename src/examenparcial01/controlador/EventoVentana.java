@@ -10,6 +10,7 @@ import examenparcial01.vista.VentanaArtista;
 import examenparcial01.vista.VentanaAsistente;
 import examenparcial01.vista.VentanaBoleto;
 import examenparcial01.vista.VentanaFestival;
+import examenparcial01.vista.VentanaPresentacion;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -43,6 +44,10 @@ public class EventoVentana implements ActionListener {
         }
         if (e.getSource().equals(this.Ventana.getMenuItemList().get(2))) {
             System.err.println("Agregar ventana Presentacion");
+            VentanaPresentacion VenPre = new VentanaPresentacion(this.Ventana.getGestionDato());
+            VenPre.setVisible(true);
+            this.Ventana.getEscritorio().add(VenPre);
+            
         }
         if (e.getSource().equals(this.Ventana.getMenuItemList().get(3))) {
             System.err.println("Agregar ventana Festival");

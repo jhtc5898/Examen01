@@ -25,5 +25,11 @@ public class Artista extends Persona {
     public void setNombreBanda(String nombreBanda) {
         this.nombreBanda = nombreBanda;
     }
+
+    @Override
+    public String toString() {
+        return  nombreBanda ;
+    }
+    
     
 }

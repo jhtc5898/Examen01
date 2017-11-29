@@ -46,7 +46,7 @@ public class VentanaPresentacion extends JInternalFrame{
     {
         super("Ventana Presentacion",true,true,true,true);
         this.gestionDato = gestionDato;
-        this.setSize(625, 550);
+        this.setSize(800, 550);
         this.setLocation(420, 120);
         this.iniciaComponente();              
     }
@@ -129,6 +129,8 @@ public class VentanaPresentacion extends JInternalFrame{
         
         this.etiList= new ArrayList<JLabel>();
         this.txtList= new ArrayList<JTextField>();
+        this.txtList.add(new JTextField(15));
+        
         this.botonList= new ArrayList<JButton>();
         this.comboFestival = new JComboBox(this.cargaCombo());
         this.comboArtista = new JComboBox(this.cargaCombo2());
@@ -146,21 +148,28 @@ public class VentanaPresentacion extends JInternalFrame{
         this.encabezado[1] = "Artista";
         this.encabezado[2] = "# Presentaciones";
         
-        this.datos = cargaDatosTabla(this.gestionDato.getPresentacionList().size(),4);
+        this.datos = cargaDatosTabla(this.gestionDato.getPresentacionList().size(),3);
+         
+
         
         this.modeloTabla = new DefaultTableModel(this.datos, this.encabezado);        
         this.tabla = new JTable(this.modeloTabla);
         this.scroll = new JScrollPane(this.tabla);
-        
         panel.add(this.etiList.get(0));
         panel.add(this.comboFestival);
         panel.add(this.etiList.get(1));
         panel.add(this.comboArtista);
         panel.add(this.etiList.get(2));
-        panel.add(this.txtList.get(2));
+        panel.add(this.txtList.get(0));
+        panel.add(this.botonList.get(0));
+        panel.add(this.botonList.get(1));
+        panel.add(this.scroll);
+  
         
         this.botonList.get(0).addActionListener(new EventoPresentacion(this));
         this.botonList.get(1).addActionListener(new EventoPresentacion(this));
+        
+       
         
         this.add(panel);
     }
@@ -183,7 +192,7 @@ public class VentanaPresentacion extends JInternalFrame{
         int i=0;
         for(Artista a: this.gestionDato.getArtistaList()) 
         {
-            retorno[i] = a.getNombre() + "" +a.getApellido();
+            retorno[i] = a.getNombreBanda() +" Representante:"+a.getNombre();
             i++;
         }
         return retorno;

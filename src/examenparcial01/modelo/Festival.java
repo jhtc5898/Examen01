@@ -47,7 +47,7 @@ public class Festival
 
     @Override
     public String toString() {
-        return "Festival{" + "nombreFestival=" + nombreFestival + ", direccion=" + direccion + ", auspicio=" + auspicio + '}';
+        return  nombreFestival  ;
     }
 
 

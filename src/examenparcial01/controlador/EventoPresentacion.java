@@ -51,7 +51,7 @@ public class EventoPresentacion implements ActionListener {
         this.festival = this.ventanaPresentacion.getGestionDato().getFestivalList().get(nFes);
         int nArt = this.ventanaPresentacion.getComboArtista().getSelectedIndex();
         this.artista = this.ventanaPresentacion.getGestionDato().getArtistaList().get(nFes);
-        int numPresentaciones = Integer.parseInt(this.ventanaPresentacion.getTxtList().get(2).getText());
+        int numPresentaciones = Integer.parseInt(this.ventanaPresentacion.getTxtList().get(0).getText());
         
         Presentacion p = new Presentacion(this.festival,this.artista,numPresentaciones);
         

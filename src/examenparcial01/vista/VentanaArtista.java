@@ -208,6 +208,12 @@ public class VentanaArtista extends JInternalFrame{
     public void setPanel(JPanel panel) {
         this.panel = panel;
     }
+
+    @Override
+    public String toString() {
+        return "VentanaArtista" + "gestionDato=" + gestionDato + ", etiList=" + etiList + ", txtList=" + txtList + ", boton=" + boton + ", datos=" + datos + ", encabezado=" + encabezado + ", modeloTabla=" + modeloTabla + ", tabla=" + tabla + ", scroll=" + scroll + ", panel=" + panel + '}';
+    }
+    
     
 }
 
